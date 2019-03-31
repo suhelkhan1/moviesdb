@@ -1,0 +1,1 @@
+export { IMovie } from './movie.model';

@@ -1,0 +1,6 @@
+<!-- Generated template for the MovieListComponent component -->
+<ion-list>
+  <ion-item *ngFor="let item of movies" on-click="goToMoviePage(item)">
+    {{item.original_title || item.original_name}}
+  </ion-item>
+</ion-list>

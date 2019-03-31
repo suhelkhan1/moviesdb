@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <h1 id="home-heading1" style="color:#000000;">
+    Trending Movies/ TV Shows
+  </h1>
+  <!-- <movie-list [movies]="trendingMovies"></movie-list> -->
+  <div *ngFor="let item of trendingMovies">
+    <movie-card [movie]="item"></movie-card>
+  </div>
+</ion-content>

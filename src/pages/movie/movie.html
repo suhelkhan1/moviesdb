@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1 id="home-heading1" style="color:#000000;">
+    {{movie?.original_title || movie?.original_name}}
+  </h1>
+  <ion-slides style="height: auto" pager>
+    <ion-slide *ngFor="let img of images?.backdrops">
+      <ion-thumbnail>
+        <img style="object-fit: cover" width="100%" height="220px" [src]="imageUrl + img.file_path">
+      </ion-thumbnail>
+    </ion-slide>
+  </ion-slides>
+  <p>{{movie?.overview}}</p>
+</ion-content>
